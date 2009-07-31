@@ -1,7 +1,7 @@
-# $Id: 01_boundaries.t 46 2009-01-24 23:19:13Z roland $
-# $Revision: 46 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/t/01_boundaries.t $
-# $Date: 2009-01-25 00:19:13 +0100 (Sun, 25 Jan 2009) $
+# $Id: 02_classes.t 100 2009-07-30 14:46:33Z roland $
+# $Revision: 100 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/02_classes.t $
+# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
 
 use utf8;
 use Test::More;

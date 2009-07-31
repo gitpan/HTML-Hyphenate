@@ -1,7 +1,7 @@
-# $Id: 00_base.t 49 2009-01-27 23:00:15Z roland $
-# $Revision: 49 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/t/00_base.t $
-# $Date: 2009-01-28 00:00:15 +0100 (Wed, 28 Jan 2009) $
+# $Id: 00_base.t 100 2009-07-30 14:46:33Z roland $
+# $Revision: 100 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/00_base.t $
+# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
 
 use Test::More;
 use Test::NoWarnings;

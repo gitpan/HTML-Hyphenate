@@ -1,7 +1,7 @@
-# $Id: 11_test-coverage.t 22 2008-12-06 03:16:09Z roland $
-# $Revision: 22 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/t/11_test-coverage.t $
-# $Date: 2008-12-06 04:16:09 +0100 (Sat, 06 Dec 2008) $
+# $Id: 11_test-coverage.t 100 2009-07-30 14:46:33Z roland $
+# $Revision: 100 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/11_test-coverage.t $
+# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
 
 use Test::More;
 eval "use Test::TestCoverage 0.08";

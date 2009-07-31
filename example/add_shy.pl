@@ -1,12 +1,12 @@
-#!/sw/bin/perl -w    # -*- cperl; cperl-indent-level: 4 -*-
+#!perl -w    # -*- cperl; cperl-indent-level: 4 -*-
 use strict;
 use warnings;
 
 ## no critic qw(ProhibitLongLines)
-# $Id: P800Picture.pm 50 2009-01-31 09:22:52Z roland $
-# $Revision: 50 $
+# $Id: add_shy.pl 106 2009-07-30 16:06:18Z roland $
+# $Revision: 106 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/lib/Date/Extract/P800Picture.pm$
-# $Date: 2009-01-31 10:22:52 +0100 (Sat, 31 Jan 2009) $
+# $Date: 2009-07-30 18:06:18 +0200 (Thu, 30 Jul 2009) $
 ## use critic
 
 use 5.006000;

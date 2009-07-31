@@ -1,7 +1,7 @@
-# $Id: 12_manifest.t 33 2008-12-07 02:45:25Z roland $
-# $Revision: 33 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/t/12_manifest.t $
-# $Date: 2008-12-07 03:45:25 +0100 (Sun, 07 Dec 2008) $
+# $Id: 12_manifest.t 100 2009-07-30 14:46:33Z roland $
+# $Revision: 100 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/12_manifest.t $
+# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
 
 use Test::More;
 eval "use Test::CheckManifest 1.01";

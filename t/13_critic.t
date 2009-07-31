@@ -1,7 +1,7 @@
-# $Id: 13_critic.t 26 2008-12-06 03:55:22Z roland $
-# $Revision: 26 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/t/13_critic.t $
-# $Date: 2008-12-06 04:55:22 +0100 (Sat, 06 Dec 2008) $
+# $Id: 13_critic.t 100 2009-07-30 14:46:33Z roland $
+# $Revision: 100 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/13_critic.t $
+# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
 
 use strict;
 use warnings;

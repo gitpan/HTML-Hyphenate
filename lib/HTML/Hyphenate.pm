@@ -3,17 +3,17 @@ use strict;
 use warnings;
 
 ## no critic qw(ProhibitLongLines)
-# $Id: P800Picture.pm 50 2009-01-31 09:22:52Z roland $
-# $Revision: 50 $
-# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/debbie/trunk/Date-Extract-P800Picture/lib/Date/Extract/P800Picture.pm$
-# $Date: 2009-01-31 10:22:52 +0100 (Sat, 31 Jan 2009) $
+# $Id: Hyphenate.pm 110 2009-07-31 01:33:45Z roland $
+# $Revision: 110 $
+# $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/lib/HTML/Hyphenate.pm $
+# $Date: 2009-07-31 03:33:45 +0200 (Fri, 31 Jul 2009) $
 ## use critic
 
 use 5.006000;
 use utf8;
 use charnames qw(:full);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Log::Log4perl qw(:easy get_logger);
 use Set::Scalar;
@@ -333,6 +333,8 @@ HTML::Hyphenate - class for inserting soft hyphens into HTML.
 
 =head1 VERSION
 
+This is version 0.02.
+
 =head1 SYNOPSIS
 
     use HTML::Hyphenate;
@@ -400,7 +402,8 @@ Have L<HTML::TreeBuilder> output HTML in HTML or XML modus.
 
 =item $hyphenator->default_lang('en-us');
 
-
+Gets or sets the default pattern to use when no language can be derived from
+the HTML.
 
 =item $hyphenator->default_included();
 
