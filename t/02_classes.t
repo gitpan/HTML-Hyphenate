@@ -1,11 +1,14 @@
-# $Id: 02_classes.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 02_classes.t 114 2009-08-02 19:12:48Z roland $
+# $Revision: 114 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/02_classes.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2009-08-02 21:12:48 +0200 (Sun, 02 Aug 2009) $
 
+use strict;
+use warnings;
 use utf8;
+
 use Test::More;
-use Test::NoWarnings;
+$ENV{TEST_AUTHOR} && eval { require Test::NoWarnings };
 
 my $INCLUDE_BY_DEFAULT = 1;
 my $EXCLUDE_BY_DEFAULT = 0;
@@ -113,8 +116,14 @@ plan tests => ( 0 + @fragments ) + 1;
 use HTML::Hyphenate;
 my $h = HTML::Hyphenate->new();
 foreach my $frag (@fragments) {
-	$h->classes_included($frag->[0]);
-	$h->classes_excluded($frag->[1]);
-	$h->default_included($frag->[2]);
-    is( $h->hyphenated( $frag->[3] ), $frag->[4], $frag->[5] );
+	$h->classes_included(@{$frag}[0]);
+	$h->classes_excluded(@{$frag}[1]);
+	$h->default_included(@{$frag}[2]);
+    is( $h->hyphenated( @{$frag}[3] ), @{$frag}[4], @{$frag}[5] );
 }
+
+my $msg = 'Author test. Set $ENV{TEST_AUTHOR} to a true value to run.';
+SKIP: {
+    skip $msg, 1 unless $ENV{TEST_AUTHOR};
+}
+$ENV{TEST_AUTHOR} && Test::NoWarnings::had_no_warnings();

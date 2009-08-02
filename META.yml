@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               HTML-Hyphenate
-version:            0.02
+version:            0.03
 abstract:           class for inserting soft hyphens into HTML.
 author:
     - Roland van Ipenburg <ipenburg@xs4all.nl>

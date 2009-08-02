@@ -1,12 +1,13 @@
-# $Id: 03_lang.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 03_lang.t 114 2009-08-02 19:12:48Z roland $
+# $Revision: 114 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/03_lang.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2009-08-02 21:12:48 +0200 (Sun, 02 Aug 2009) $
 
+use strict;
+use warnings;
 use utf8;
 use Test::More;
-# Avoid wide character in print warning test fails
-#use Test::NoWarnings;
+$ENV{TEST_AUTHOR} && eval { require Test::NoWarnings };
 
 my @fragments = (
     [
@@ -334,17 +335,28 @@ my @utf8_fragments = (
     ],
 );
 
-plan tests => ( 0 + @fragments + @utf8_fragments ) + 0;
+plan tests => ( 0 + @fragments + @utf8_fragments ) + 1;
 
 use HTML::Hyphenate;
 my $h = HTML::Hyphenate->new();
 foreach my $frag (@fragments) {
-    is( $h->hyphenated( $frag->[0] ), $frag->[1], $frag->[2] );
+    is( $h->hyphenated( @{$frag}[0] ), @{$frag}[1], @{$frag}[2] );
 }
 
 TODO: {
 	local $TODO = q{utf8 patterns not yet supported by TeX::Hyphen};
 	foreach my $frag (@utf8_fragments) {
-		is( $h->hyphenated( $frag->[0] ), $frag->[1], $frag->[2] );
+		is( $h->hyphenated( @{$frag}[0] ), @{$frag}[1], @{$frag}[2] );
 	}
 };
+
+my $msg = 'Author test. Set $ENV{TEST_AUTHOR} to a true value to run.';
+SKIP: {
+    skip $msg, 1 unless $ENV{TEST_AUTHOR};
+}
+if ($ENV{TEST_AUTHOR}) {
+	TODO: {
+		local $TODO = q{Wide characters in prints by Test::More};
+		Test::NoWarnings::had_no_warnings();
+	}
+}

@@ -1,5 +1,9 @@
 Revision history for HTML-Hyphenate
 
+0.03  Sun Aug  2 20:07:24 2009
+       Made RT#48368 an TODO TEST_AUTHOR
+       critic tests
+
 0.02  Fri Jul 31 02:18:44 2009
        Fixed RT#48339
 

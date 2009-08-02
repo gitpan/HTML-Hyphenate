@@ -3,17 +3,17 @@ use strict;
 use warnings;
 
 ## no critic qw(ProhibitLongLines)
-# $Id: Hyphenate.pm 110 2009-07-31 01:33:45Z roland $
-# $Revision: 110 $
+# $Id: Hyphenate.pm 114 2009-08-02 19:12:48Z roland $
+# $Revision: 114 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/lib/HTML/Hyphenate.pm $
-# $Date: 2009-07-31 03:33:45 +0200 (Fri, 31 Jul 2009) $
+# $Date: 2009-08-02 21:12:48 +0200 (Sun, 02 Aug 2009) $
 ## use critic
 
 use 5.006000;
 use utf8;
 use charnames qw(:full);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use Log::Log4perl qw(:easy get_logger);
 use Set::Scalar;
@@ -333,7 +333,7 @@ HTML::Hyphenate - class for inserting soft hyphens into HTML.
 
 =head1 VERSION
 
-This is version 0.02.
+This is version 0.03.
 
 =head1 SYNOPSIS
 

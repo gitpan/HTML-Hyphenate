@@ -1,3 +1,5 @@
 severity = 1
 [-Documentation::PodSpelling]
 [-Modules::ProhibitExcessMainComplexity]
+[-Miscellanea::ProhibitUselessNoCritic]
+[-Compatibility::PodMinimumVersion]

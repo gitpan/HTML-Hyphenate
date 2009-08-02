@@ -1,7 +1,11 @@
-# $Id: 14_kwalitee.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 14_kwalitee.t 114 2009-08-02 19:12:48Z roland $
+# $Revision: 114 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/14_kwalitee.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2009-08-02 21:12:48 +0200 (Sun, 02 Aug 2009) $
+
+use strict;
+use warnings;
+use utf8;
 
 use Test::More;
 

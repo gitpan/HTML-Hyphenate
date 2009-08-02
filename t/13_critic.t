@@ -1,10 +1,12 @@
-# $Id: 13_critic.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 13_critic.t 116 2009-08-02 20:43:55Z roland $
+# $Revision: 116 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/13_critic.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2009-08-02 22:43:55 +0200 (Sun, 02 Aug 2009) $
 
 use strict;
 use warnings;
+use utf8;
+
 use File::Spec;
 use Test::More;
 use English qw(-no_match_vars);
@@ -14,13 +16,11 @@ if ( not $ENV{TEST_AUTHOR} ) {
     plan( skip_all => $msg );
 }
 
-eval { require Test::Perl::Critic; };
-
-if ($EVAL_ERROR) {
-    my $msg = 'Test::Perl::Critic required for testing PBP compliance';
-    plan( skip_all => $msg );
+if ( !eval { require Test::Perl::Critic; 1 } ) {
+    plan skip_all => q{Test::Perl::Critic required for testing PBP compliance};
 }
-
-my $rcfile = File::Spec->catfile( 't', 'perlcriticrc' );
-Test::Perl::Critic->import( -profile => $rcfile );
-all_critic_ok();
+else {
+	Test::Perl::Critic->import(
+    	-profile => File::Spec->catfile( 't', 'perlcriticrc' ) );
+	Test::Perl::Critic::all_critic_ok();
+}

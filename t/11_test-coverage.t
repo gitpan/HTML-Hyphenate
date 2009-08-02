@@ -1,18 +1,20 @@
-# $Id: 11_test-coverage.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 11_test-coverage.t 116 2009-08-02 20:43:55Z roland $
+# $Revision: 116 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/11_test-coverage.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2009-08-02 22:43:55 +0200 (Sun, 02 Aug 2009) $
+
+use strict;
+use warnings;
+use utf8;
 
 use Test::More;
-eval "use Test::TestCoverage 0.08";
-plan skip_all => "Test::TestCoverage 0.08 required for testing test coverage"
-  if $@;
-
+if ( !eval { require Test::TestCoverage; 1 } ) {
+	plan skip_all => q{Test::TestCoverage required for testing test coverage};
+}
 plan tests => 1;
-test_coverage("Date::Extract::P800Picture");
+Test::TestCoverage::test_coverage("HTML::Hyphenate");
 
-my $obj = Date::Extract::P800Picture->new();
-$obj->filename("8B481234.JPG");
-$obj->extract();
+my $obj = HTML::Hyphenate->new();
+$obj->hyphenated(q{<p>hyphenated hyphenation</p>});
 
-ok_test_coverage('Date::Extract::P800Picture');
+Test::TestCoverage::ok_test_coverage('HTML::Hyphenate');
