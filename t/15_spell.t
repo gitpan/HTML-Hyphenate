@@ -1,7 +1,7 @@
-# $Id: 15_spell.t 100 2009-07-30 14:46:33Z roland $
-# $Revision: 100 $
+# $Id: 15_spell.t 321 2010-10-30 18:06:08Z roland $
+# $Revision: 321 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/15_spell.t $
-# $Date: 2009-07-30 16:46:33 +0200 (Thu, 30 Jul 2009) $
+# $Date: 2010-10-30 20:06:08 +0200 (Sat, 30 Oct 2010) $
 
 use strict;
 use warnings;
@@ -31,3 +31,4 @@ cafeetje
 cafee
 je
 tje
+Readonly

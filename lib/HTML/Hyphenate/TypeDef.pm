@@ -3,16 +3,16 @@ use strict;
 use warnings;
 
 ## no critic qw(ProhibitLongLines)
-# $Id: TypeDef.pm 109 2009-07-31 01:30:29Z roland $
-# $Revision: 109 $
+# $Id: TypeDef.pm 321 2010-10-30 18:06:08Z roland $
+# $Revision: 321 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/lib/HTML/Hyphenate/TypeDef.pm $
-# $Date: 2009-07-31 03:30:29 +0200 (Fri, 31 Jul 2009) $
+# $Date: 2010-10-30 20:06:08 +0200 (Sat, 30 Oct 2010) $
 ## use critic
 
 use 5.006000;
 use utf8;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Class::Meta::Type;
 
@@ -36,8 +36,8 @@ __END__
 
 =head1 NAME
 
-HTML::Hyphenate::TypeDef - class for defining a L<TeX::Hyphen> and a
-L<HTML::TreeBuilder> property.
+HTML::Hyphenate::TypeDef - class for defining a L<TeX::Hyphen|TeX::Hyphen> and
+a L<HTML::TreeBuilder|HTML::TreeBuilder> property.
 
 =head1 VERSION
 
@@ -56,8 +56,8 @@ L<HTML::TreeBuilder> property.
 =head1 DESCRIPTION
 
 The B<HTML::Hyphenate:TypeDef> module makes it possible to use a
-L<TeX::Hyphen> class and a L<HTML::TreeBuilder> as property of a
-L<Class::Meta> defined class.
+L<TeX::Hyphen|TeX::Hyphen> class and a L<HTML::TreeBuilder|HTML::TreeBuilder>
+as property of a L<Class::Meta|Class::Meta> defined class.
 
 =head1 SUBROUTINES/METHODS
 
@@ -77,7 +77,7 @@ Roland van Ipenburg, E<lt>ipenburg@xs4all.nlE<gt>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (C) 2009 by Roland van Ipenburg
+Copyright (C) 2010 by Roland van Ipenburg
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,

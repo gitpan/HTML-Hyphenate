@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               HTML-Hyphenate
-version:            0.03
+version:            0.04
 abstract:           class for inserting soft hyphens into HTML.
 author:
     - Roland van Ipenburg <ipenburg@xs4all.nl>
@@ -8,15 +8,17 @@ license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0
+build_requires:
+    ExtUtils::MakeMaker:  0
 requires:
-    Class::Meta::Express:  0
+    Class::Meta::Express:  0.11
     Class::Meta::Type:    0
     HTML::Entities:       0
     HTML::TreeBuilder:    0
     Log::Log4perl:        0
-    Readonly:             0
+    Readonly:             1.03
     Set::Scalar:          0
-    Test::More:           0
+    Test::More:           0.86
     Test::NoWarnings:     0
     TeX::Hyphen:          0
     TeX::Hyphen::Pattern:  0
@@ -25,7 +27,7 @@ no_index:
     directory:
         - t
         - inc
-generated_by:       ExtUtils::MakeMaker version 6.48
+generated_by:       ExtUtils::MakeMaker version 6.56
 meta-spec:
     url:      http://module-build.sourceforge.net/META-spec-v1.4.html
     version:  1.4

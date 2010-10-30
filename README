@@ -1,4 +1,4 @@
-HTML-Hyphenate version 0.03
+HTML-Hyphenate version 0.04
 
 This module can be used to insert soft hyphens into HTML.
 
@@ -15,22 +15,23 @@ DEPENDENCIES
 
 This module requires these other modules and libraries:
 
-  Class::Meta::Express 	1.10
+  Class::Meta::Express 0.11
   Class::Meta::Type
   Encode
   HTML::Entities
-  HTML::TreeBuilder
+  HTML::TreeBuilder    anything but 4.0
   Log::Log4perl
-  Readonly 		        1.03
+  Readonly 	       1.03
   Set::Scalar
   TeX::Hyphen
   TeX::Hyphen::Pattern
-  Test::More		    0.86
+  Test::More	       0.86
   Test::NoWarnings
+  version
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2009, Roland van Ipenburg
+Copyright (C) 2010, Roland van Ipenburg
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,

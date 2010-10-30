@@ -1,7 +1,7 @@
-﻿# $Id: 01_default.t 114 2009-08-02 19:12:48Z roland $
-# $Revision: 114 $
+﻿# $Id: 01_default.t 321 2010-10-30 18:06:08Z roland $
+# $Revision: 321 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/01_default.t $
-# $Date: 2009-08-02 21:12:48 +0200 (Sun, 02 Aug 2009) $
+# $Date: 2010-10-30 20:06:08 +0200 (Sat, 30 Oct 2010) $
 
 use strict;
 use warnings;
@@ -9,6 +9,17 @@ use utf8;
 
 use Test::More;
 $ENV{TEST_AUTHOR} && eval { require Test::NoWarnings };
+
+use HTML::Tree;
+use version;
+
+my $tree = version->parse($HTML::Tree::VERSION);
+my $broken = version->parse('4.0');
+
+diag(q{Using HTML::Tree version } . $tree);
+if ($tree == $broken) {
+	BAIL_OUT(q{HTML::Tree version 4.0 is not supported, use 3.23 or earlier or 4.1 or later to avoid issues as reported in RT #61809 <https://rt.cpan.org/Ticket/Display.html?id=61809>});
+}
 
 my @fragments = (
     [
@@ -33,7 +44,9 @@ my @fragments = (
     ],
     [
         'Supercalifragilisticexpialidocious &lt; &gt; &amp;',
-'Su­per­cal­ifrag­ilis­tic­ex­pi­ali­do­cious &#60; &#62; &#38;',
+		$tree < $broken
+			? 'Su­per­cal­ifrag­ilis­tic­ex­pi­ali­do­cious &#60; &#62; &#38;'
+			: 'Su­per­cal­ifrag­ilis­tic­ex­pi­ali­do­cious &lt; &gt; &amp;',
         'plain word, HTML encoded less than sign, greater than sign and ampersand'
     ],
     [

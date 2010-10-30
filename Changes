@@ -1,5 +1,10 @@
 Revision history for HTML-Hyphenate
 
+0.04  Sat Oct 30 12:39:26 2010
+       Adjusted tests to pass depending on HTML::Tree 4.1 (RT#61801)
+       Adjusted tests to bail out depending on HTML::Tree 4.0 (RT#61801)
+       Added text to links in pod
+
 0.03  Sun Aug  2 20:07:24 2009
        Made RT#48368 an TODO TEST_AUTHOR
        critic tests
