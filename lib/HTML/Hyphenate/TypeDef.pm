@@ -2,17 +2,15 @@ package HTML::Hyphenate::TypeDef;    # -*- cperl; cperl-indent-level: 4 -*-
 use strict;
 use warnings;
 
-## no critic qw(ProhibitLongLines)
-# $Id: TypeDef.pm 321 2010-10-30 18:06:08Z roland $
-# $Revision: 321 $
+# $Id: TypeDef.pm 387 2010-12-21 19:41:17Z roland $
+# $Revision: 387 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/lib/HTML/Hyphenate/TypeDef.pm $
-# $Date: 2010-10-30 20:06:08 +0200 (Sat, 30 Oct 2010) $
-## use critic
+# $Date: 2010-12-21 20:41:17 +0100 (Tue, 21 Dec 2010) $
 
 use 5.006000;
 use utf8;
 
-our $VERSION = '0.02';
+our $VERSION = '0.05';
 
 use Class::Meta::Type;
 
@@ -34,6 +32,8 @@ __END__
 
 =encoding utf8
 
+=for stopwords Ipenburg
+
 =head1 NAME
 
 HTML::Hyphenate::TypeDef - class for defining a L<TeX::Hyphen|TeX::Hyphen> and
@@ -41,17 +41,19 @@ a L<HTML::TreeBuilder|HTML::TreeBuilder> property.
 
 =head1 VERSION
 
+This is version 0.05.
+
 =head1 SYNOPSIS
 
-	use Class::Meta::Express;
-	use HTML::Hyphenate::TypeDef;
+    use Class::Meta::Express;
+    use HTML::Hyphenate::TypeDef;
 
-	class {
-		has hyphen	=> (
-			is 		=> 'hyphen',
-			default => sub { TeX::Hyphen->new() },
-		);
-	};
+    class {
+        has hyphen    => (
+            is         => 'hyphen',
+            default => sub { TeX::Hyphen->new() },
+        );
+    };
 
 =head1 DESCRIPTION
 

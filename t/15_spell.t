@@ -1,7 +1,7 @@
-# $Id: 15_spell.t 321 2010-10-30 18:06:08Z roland $
-# $Revision: 321 $
+# $Id: 15_spell.t 387 2010-12-21 19:41:17Z roland $
+# $Revision: 387 $
 # $HeadURL: svn+ssh://ipenburg.xs4all.nl/srv/svnroot/elaine/trunk/HTML-Hyphenate/t/15_spell.t $
-# $Date: 2010-10-30 20:06:08 +0200 (Sat, 30 Oct 2010) $
+# $Date: 2010-12-21 20:41:17 +0100 (Tue, 21 Dec 2010) $
 
 use strict;
 use warnings;
@@ -20,15 +20,4 @@ if ($EVAL_ERROR) {
     plan( skip_all => $msg );
 }
 
-Test::Spelling::add_stopwords(<DATA>);
 Test::Spelling::all_pod_files_spelling_ok();
-__DATA__
-Ipenburg
-buur
-buurt
-buurtje
-cafeetje
-cafee
-je
-tje
-Readonly

@@ -1,5 +1,8 @@
 Revision history for HTML-Hyphenate
 
+0.05  Tue Dec 21 17:03:29 2010
+       Fixed RT#64114
+
 0.04  Sat Oct 30 12:39:26 2010
        Adjusted tests to pass depending on HTML::Tree 4.1 (RT#61801)
        Adjusted tests to bail out depending on HTML::Tree 4.0 (RT#61801)

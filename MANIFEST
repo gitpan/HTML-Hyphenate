@@ -18,5 +18,6 @@ t/13_critic.t
 t/14_kwalitee.t
 t/15_spell.t
 t/perlcriticrc
+t/rt.t
 META.yml                                 Module meta-data (added by MakeMaker)
 SIGNATURE                                Public-key signature (added by MakeMaker)
